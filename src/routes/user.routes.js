@@ -6,7 +6,7 @@ import auth from "../middlewares/auth.middleware.js";
 const router = Router();
 
 router.get("/getUser", auth, (req, res) => {
-  res.status(200).json(new ApiResponse(200, "User", req.user))
+  return res.status(200).json(new ApiResponse(200, "User", req.user))
 });
 
 router.post("/register", async (req, res) => {
